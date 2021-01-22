@@ -10,6 +10,6 @@ s.bind((host, port))
 s.listen(5)
 while True:
     c, addr = s.accept()
-    print(f'conection with {addr}')
+    print(f"conection with {addr}")
     c.send('thank you for connecting')
     c.close()
