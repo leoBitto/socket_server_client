@@ -13,10 +13,10 @@ s.connect((host, port))
 ## qui il codice per elaborazioni dati da
 ## parte del client
 print(f"client: just connected from {s.getsockname()}")
-
+print("client: just sent a message to the server")
 message = 'I am a string all over the network! Hello world!'
 s.send(message.encode())
-print("client: just sent a message to the server")
+
 
 server_message = s.recv(1024).decode()
 print(f"client: the server said: {server_message}")
